@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet"/> <!--Used this link for an icon on the login page-->
+    <title>GAMEBRIDGE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="validations.js"></script>
+</head>
+<body>
+    <!--This piece of code is for the navigation bar-->
+    <div id="particles-js">
+        <div class="topnav">
+            <p>SEARCH</p>
+                <a href="index.html">Go Home</a> <!--To co back to index.html-->         
+                <input type="text" placeholder="Search.." name="search" id="searchbar"> <!--Searchbar-->
+            <img alt="User Picture" src="userpicture.png">
+                <button class="button" onclick="toggleLogin()">LOGIN</button>
+                <button class="button" onclick="toggleRegister()">REGISTER</button> <!--Defining the button-->
+            </form>
+            </div>
+    </div>
+        
+    
+    <div class="particles">
+        <p> GAMEBRIDGE is a social media website for gamers. Our goal is to help gamers who are looking for someone to play with. 
+            <br>For example: it's been a long day, you come home exhausted and all you want is to share some laughs with your friends. 
+            <br>But everyones busy. GameBridge will help you overcome that obstacle! Just create an account, go to the community of the game you want to play and you'll find a lot of new friends waiting to join! 
+        </p>
+        <script type="text/javascript" src="particles.js"></script> <!--This file is something I got from the internet to make the website look cool-->
+        <script type="text/javascript" src="app.js"></script> <!--This file is something I got from the internet to make the website look cool-->
+    </div>
+
+    <!--This code is to display the games available-->
+    <div class="maingame">
+        <p>LEAGUE OF LEGENDS</p>
+        <table>
+            <tr>
+              <th>Username</th>
+              <th>Rank</th>
+              <th>Request</th>
+            </tr>
+            <tr>
+              <td>BeastMaster64</td>
+              <td>Gold 1</td>
+              <td>Need someone to help me get to plat</td>
+            </tr>
+            <tr>
+              <td>Loply321</td>
+              <td>Diamond 1</td>
+              <td>Does anyone need an elo boost?</td>
+            </tr>
+          </table>
+     </div>
+
+     <!--This code is for the popup register page -->
+    <div class="popup-register">
+        <div class="popup-content-register">
+            <i class="fas fa-times" onclick="toggleRegister()"></i> <!--This is for the close button of the popup-->
+            <img alt="Icon" src="icon.png">
+            <input type="text" placeholder="Email" id="email-register" />
+            <input type="text" placeholder="Username" id="username-register" />
+            <input type="password" placeholder="Password" id="password-register" />
+            <input type="button" value="Register" id="submit" onclick="check()"/>
+        </div>
+    </div>
+
+    <!--This code changes the display=none to flex for the login and register page to popup when button is pressed-->
+    <script>
+        function toggleLogin() {
+          document.querySelector(".popup").classList.toggle("open");
+        }
+        function toggleRegister() {
+          document.querySelector(".popup-register").classList.toggle("open");
+        }
+      </script>
+
+<footer>
+    <p>Contact us on 
+      <iframe src="https://discord.com/widget?id=752488080060973057&theme=dark" width="350" height="70" allowtransparency="true" 
+      frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></p>
+</footer>
+
+</body>
+</html>
